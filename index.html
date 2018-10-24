@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles/style.css" />
+        <h1 style="font-family:helvetica;">Focal Length Calculator</h1>
+    </head>
+
+<body>
+
+    <div class="toptext">
+    	<p>Enter current focal length, and click "Cropped FL" with your brand to get your effective focal length.</p>
+        <p>Enter desired focal length and click "Needed FL" with your brand to get the focal length needed to have your desired effective focal length.</p>
+        <p>Round to the nearest mm.</p>
+     </div>
+
+</body>
+
+<hr>
+
+    	 <form name="calculator">
+
+
+             <div class="display">
+    <input type="text" name="display" id="display"> </div>
+
+             <div id="clearbutton">
+
+                	<input type="button" class="clearbutton" id="clear" value="Clear" onclick="calculator.display.value = ' '">
+
+             </div>
+
+             <div class="buttons">
+
+                	<input type="button" class="button" name="doit" value="Cropped FL (Nikon)" onclick="calculator.displayother.value = (calculator.display.value) * '1.5' + 'mm'">
+                  <input type="button" class="button" name="gotit" value="Needed FL (Nikon)" onclick= "calculator.displayother.value = (calculator.display.value) / '1.5' + 'mm'">
+
+                  <input type="button" class="button" name="doitcanon" value= "Cropped FL (Canon)" onclick="calculator.displayother.value = (calculator.display.value) * '1.6' + 'mm'">
+                	<input type="button" class="button" name="gotitcanon" value="Needed FL (Canon)" onclick="calculator.displayother.value = (calculator.display.value) / '1.6' + 'mm'">
+
+             </div>
+
+    <div class="outputdisplay">
+             <input type="text" name="displayother" id="#displayother" disabled>
+             </div>
+             </form>
+
+<hr>
+
+</html>
